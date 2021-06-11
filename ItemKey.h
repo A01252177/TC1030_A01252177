@@ -1,9 +1,13 @@
 //Daniel Pablos Valenzuela - Cesar Galvez Cruz
 //A01252290 - A01252177
 //TC1030
-//29/05/2021
+//11/06/2021
+#include <iostream>
+#include <string>
 
 #include "Item.h"
+
+using namespace std; 
 
 class Key:public Item {
 private:
@@ -12,14 +16,16 @@ public:
     Key();
     Key(int, int, string, string, int);
     void use();
+    void addItemKey();
 };
 Key::Key() : Item(){
-    KeyType = 0;
-    cout <<"Ganaste una Key"<<endl;
+    KeyType = 0;  
 }
-Key::Key(int g, int l, string n,  string d, int h):Item(l,n,d,h){
+
+Key::Key(int g, int l, string n,  string d, int h):Item(){
     KeyType = g;
 }
+
 void Key::use(){
-    cout << "+1 Key, Recuerda que con esta Key puedes abrir la puerta para ganar!!" <<endl;
+    cout << "Audifonos" <<endl;
 }
